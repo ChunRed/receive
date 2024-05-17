@@ -7,7 +7,7 @@ app.engine('ejs', engine);
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.static('node_modules'));
-app.set('views', "./views");
+
 
 app.get('/demo', function (req, res) {
     res.render('demo');
