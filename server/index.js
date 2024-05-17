@@ -5,10 +5,9 @@ const io = require('socket.io')(http);
 const engine = require('ejs-locals');
 
 app.engine('ejs', engine);
-app.set('view engine', 'ejs');
-
-
-app.set('views', "./views");
+app.set("views", __dirname + "/views");
+app.set("view engine", "ejs");
+app.use(express.static(__dirname + "public"));
 
 app.get('/', function (req, res) {
     res.send("server is running.")
