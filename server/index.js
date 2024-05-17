@@ -13,4 +13,7 @@ io.on('connection', function (socket) {
     console.log('a user connected, user id: ' + socket.userId);
 });
 
-app.listen(3000, console.log("port: 3000"));
+console.log("socket start");
+
+let PORT = 3000; 
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

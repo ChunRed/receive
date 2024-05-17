@@ -1,12 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import { io } from "socket.io-client";
+import {useEffect,useState} from 'react'
+
+let socket;
 
 function App() {
-  let socket = io.connect("https://receive-ten.vercel.app");
+  useEffect(() => {
+
+    socket = io("http://localhost:3000/")
+  }, [])
+
   return (
     <div className="App">
-      <h2>Socket.io test</h2>
-      
+      <h1>Hello world</h1>
     </div>
   );
 }
