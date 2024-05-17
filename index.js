@@ -1,22 +1,23 @@
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
-//var engine = require('ejs-locals');
 
-//app.engine('ejs', engine);
-// app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
 app.use(express.static('node_modules'));
 
 app.set('views', "./views");
 
 
-app.engine('html', require('ejs').renderFile);
-
-app.get('/', function (req, res) {
-    res.render("demo.html")
+app.get('/demo', (req, res) => {
+    res.render("demo.html");
 });
 
-
+app.get('/test',(req, res) => {
+    res.json({
+        message: "hello",
+    });
+    console.log("hello");
+})
 
 
 
