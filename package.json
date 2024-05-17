@@ -1,0 +1,16 @@
+{
+  "name": "receive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs-locals": "^1.0.2",
+    "express": "^4.19.2",
+    "socket.io": "^2.4.1"
+  }
+}
