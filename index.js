@@ -8,8 +8,8 @@ app.use(express.static('node_modules'));
 app.set('views', "./views");
 
 
-app.get('/demo', (req, res) => {
-    res.render("demo.html");
+app.get('/demo', (req, response) => {
+    response.render("demo.html");
 });
 
 app.get('/test',(req, res) => {
